@@ -14,5 +14,5 @@
 
 ## Surfaces touched
 
-- a new repo: the five bootstrap pieces (`conventions.md` § new repo). CODEOWNERS and the stubs are in this diff; the ops overlay is its own ops PR; the ruleset and the secrets are admin actions, recorded in the PR body.
+- a new repo: CODEOWNERS and the stubs are in this diff; registering it with the fleet's agents happens outside this repo; the ruleset and the secrets are admin actions, recorded in the PR body.
 - a published surface: README.
