@@ -1,0 +1,48 @@
+{
+  "name": "@chrisgriffin/config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared Prettier, ESLint and TypeScript configs for the fleet's repos. The version is what release-pr.yml bumps and create-github-release.yml tags.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "verify": "npm run format:check && npm run lint && node --test"
+  },
+  "exports": {
+    "./prettier": "./prettier.json",
+    "./eslint": "./eslint.js",
+    "./tsconfig.json": "./tsconfig.json"
+  },
+  "files": [
+    "prettier.json",
+    "eslint.js",
+    "tsconfig.json"
+  ],
+  "prettier": "./prettier.json",
+  "dependencies": {
+    "@eslint/js": "^9.39.5",
+    "globals": "^17.13.0",
+    "typescript-eslint": "^8.72.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": ">=5.0.0 <6.1.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3"
+  }
+}

@@ -1,0 +1,30 @@
+name: Build Check
+
+# Thin trigger stub, the same one every repo in the fleet carries: the body is
+# chrisgriffin/workflows' _reusable-node-ci.yml at its `v1` tag. The `build`
+# job reports the `build / ci` check the branch ruleset requires.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: build-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event_name == 'push' || github.event.pull_request.draft == false
+    permissions:
+      contents: read
+      packages: read
+    uses: chrisgriffin/workflows/.github/workflows/_reusable-node-ci.yml@v1
+    with:
+      node_version: "22"
+      docs_only_paths: .github/CODEOWNERS
+      run: npm run verify
+    secrets:
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

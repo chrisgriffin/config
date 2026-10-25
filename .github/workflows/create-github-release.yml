@@ -1,0 +1,22 @@
+name: Create GitHub Release
+
+# Thin trigger stub, the same one every repo in the fleet carries: the body is
+# chrisgriffin/workflows' _reusable-create-github-release.yml at its `v1` tag.
+# When the `release/next` PR merges into main it tags the merge commit
+# `vX.Y.Z` and moves the floating `vX` tag onto it, which is the ref every
+# repo's `github:chrisgriffin/config#v1` dependency resolves. Nothing to
+# build or publish: the configs are the release.
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  release:
+    if: github.event.pull_request.merged == true
+    permissions:
+      contents: write
+    uses: chrisgriffin/workflows/.github/workflows/_reusable-create-github-release.yml@v1
+    with:
+      floating_major_tag: true
