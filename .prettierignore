@@ -1,0 +1,4 @@
+# Laid at runtime by the operator (chrisgriffin/ops), never tracked here: its role docs and recaps aren't ours to format.
+.agents/
+# Spec Kit's vendored tree, laid in from the operator's one copy and never tracked here: upstream's templates aren't ours to format.
+.specify/
