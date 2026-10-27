@@ -1,6 +1,6 @@
 {
   "name": "@chrisgriffin/config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Shared Prettier, ESLint and TypeScript configs for the fleet's repos. The version is what release-pr.yml bumps and create-github-release.yml tags.",
   "license": "MIT",

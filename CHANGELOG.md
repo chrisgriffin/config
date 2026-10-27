@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.1](https://github.com/chrisgriffin/config/compare/v1.0.0...v1.0.1) (2026-10-26)
+
+### Bug Fixes
+
+- ignore the operator's laid trees in Prettier ([35539ac](https://github.com/chrisgriffin/config/commit/35539acfaff1194d19f6c9407a919c68e6de8e2d))
+
 ## 1.0.0 (2026-10-24)
 
 ### Features
