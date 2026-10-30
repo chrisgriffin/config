@@ -19,3 +19,11 @@ jobs:
       EVALUATOR_FIRE_TOKEN: ${{ secrets.EVALUATOR_FIRE_TOKEN }}
       AUTOFIX_FIRE_TOKEN: ${{ secrets.AUTOFIX_FIRE_TOKEN }}
       OPS_GH_TOKEN: ${{ secrets.OPS_GH_TOKEN }}
+      # ops#1919: a user token, so the gate can resolve an inline finding thread.
+      # Passed as TARGET_TOKEN, the name the reusable at v1 already declares; a
+      # secret the callee does not declare fails the run at parse time. At v1
+      # that slot is also the ops-token fallback (OPS_GH_TOKEN || TARGET_TOKEN),
+      # so with OPS_GH_TOKEN empty the gate clones ops with this token instead
+      # of failing on the missing one. Pass it as RELEASE_PR_TOKEN once
+      # chrisgriffin/workflows#40 is in v1.
+      TARGET_TOKEN: ${{ secrets.RELEASE_PR_TOKEN }}

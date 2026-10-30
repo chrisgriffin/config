@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.2](https://github.com/chrisgriffin/config/compare/v1.0.1...v1.0.2) (2026-10-29)
+
+### Bug Fixes
+
+- **evaluator-gate:** say TARGET_TOKEN also feeds the ops-token fallback at v1 ([db46f71](https://github.com/chrisgriffin/config/commit/db46f71fc68d9de25c3ec1b816fddeca543c082e))
+
 ## [1.0.1](https://github.com/chrisgriffin/config/compare/v1.0.0...v1.0.1) (2026-10-26)
 
 ### Bug Fixes
