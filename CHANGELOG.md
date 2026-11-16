@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/chrisgriffin/config/compare/v1.0.2...v1.0.3) (2026-11-16)
+
+### Bug Fixes
+
+- **deps:** override minimatch past GHSA-g3hv-75wg-m249 ([b836c5e](https://github.com/chrisgriffin/config/commit/b836c5e8dc8ed2e17119004763fe4c0336784c05))
+- **deps:** scope the minimatch override to the advisory range ([05b8ca2](https://github.com/chrisgriffin/config/commit/05b8ca25fa6f6da1c039ab6b0d4e8b4c512a1579))
+
 ## [1.0.2](https://github.com/chrisgriffin/config/compare/v1.0.1...v1.0.2) (2026-10-29)
 
 ### Bug Fixes
